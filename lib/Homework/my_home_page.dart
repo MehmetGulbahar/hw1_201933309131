@@ -15,8 +15,7 @@ class MyHomePage extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Lamp(),
+          children: const [
             LightButton(),
           ],
         ),

@@ -18,9 +18,9 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
-        progressIndicatorTheme: ProgressIndicatorThemeData(
+        progressIndicatorTheme: const ProgressIndicatorThemeData(
             color: Colors.purpleAccent),
-        listTileTheme: ListTileThemeData(contentPadding: EdgeInsets.zero),
+        listTileTheme: const ListTileThemeData(contentPadding: EdgeInsets.zero),
         cardTheme: CardTheme(shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20))),
         inputDecorationTheme: const InputDecorationTheme(
@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
         ),
 
       ),
-      home: const MyHomePage(),
+      home: MyHomePage(),
     );
   }
 }
