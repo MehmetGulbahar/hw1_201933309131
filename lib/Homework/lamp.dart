@@ -6,7 +6,8 @@ class Lamp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  DecoratedBox(
-        decoration: BoxDecoration(color: Colors.green),
+
+        decoration: BoxDecoration(color: isOn ? Colors.green : Colors.red),
     child: Padding(
       padding: EdgeInsets.all(5.0),
       child: Text(isOn ? 'ON' : 'OFF'),
