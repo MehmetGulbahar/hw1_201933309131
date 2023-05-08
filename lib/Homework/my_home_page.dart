@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hw1_20210602210/Homework/Classroom.dart';
 
 import 'lamp.dart';
 import 'light_button.dart';
@@ -16,7 +17,7 @@ class MyHomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: const [
-            LightButton(),
+            Classroom(),
           ],
         ),
       ),

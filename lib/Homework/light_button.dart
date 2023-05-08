@@ -1,42 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:hw1_20210602210/Homework/lamp.dart';
 
-class LightButton extends StatefulWidget {
-  const LightButton({Key? key}) : super(key: key);
+class LightButton extends StatelessWidget {
+  Function() buttonPress;
+ LightButton({Key? key, required this.buttonPress}) : super(key: key);
 
-  @override
-  State<LightButton> createState() => _LightButtonState();
-}
-
-class _LightButtonState extends State<LightButton> {
-  bool isLightOn =false;
-  void _lightState(){
-    setState(() {
-      isLightOn = !isLightOn;
-    });
-  }
+ static bool isLightOn = false;
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return DecoratedBox(
+      decoration: BoxDecoration(color:  Colors.red),
+      child: Padding(
         padding: EdgeInsets.all(5.0),
-      child: Column(
-        children: [
-          DecoratedBox(
-            decoration: BoxDecoration(color: Colors.red),
-            child: Column(
-              children: [
-                Lamp(isOn: isLightOn),
-                ElevatedButton(
-                  onPressed: _lightState,
-                  child: Text(isLightOn ? "Turn Light Off" : "Turn Light On"),
-                ),
-              ],
-            ),
-          ),
-        ],
+        child: Column(
+          children: [
+            ElevatedButton(onPressed: buttonPress ,
+                child:Text(isLightOn? 'Turn Light On' : 'Turn Light Off') )
+          ],
+        ),
       ),
+
 
     );
   }
 }
-
